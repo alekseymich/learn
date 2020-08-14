@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+// File obnull style
+@import "_nullstyle";
+@font-face {
+  font-family: Proxima Nova;
+  src: url(/fonts/ProximaNovaCond-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(/fonts/Gilroy-ExtraBold.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: Proxima Nova;
+  src: url(/fonts/ProximaNovaCond-RegularIt.ttf);
+  font-style: italic;
+  font-weight: normal;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+}
+main {
+  background: url(/img/jakob-owens-oIPwvZIAp0o-unsplash.jpg) 50% / cover
+    no-repeat;
+}
+
+.container {
+  height: 80px;
+  justify-content: space-between;
+  margin: 0 auto;
+  display: flex;
+  width: 1300px;
+}
+.header {
+  display: flex;
+  top: 0px;
+  width: 100%;
+  background-image: url(/img/noize.png);
+
+  &__container {
+    height: 80px;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+    width: 1300px;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+}
+.menu {
+  display: flex;
+  text-align: end;
+
+  &-list {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    &__item {
+      font-family: roboto;
+      font-size: 15px;
+      margin: 0 0 0 30px;
+      line-height: 100%;
+      text-align: flex-end;
+      color: #ffffff;
+      &:hover {
+        color: #f2c94c;
+      }
+    }
+  }
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  margin: 70px 0 0 0;
+  justify-content: center;
+  text-align: center;
+
+  &__head {
+    margin: 0 auto;
+    font-family: Gilroy;
+    font-size: 90px;
+    text-align: center;
+    width: 512px;
+    color: #ffffff;
+  }
+  &__text {
+    color: #ffffff;
+    margin: 40px auto;
+    text-align: center;
+    font-family: roboto;
+    font-style: normal;
+    font-size: 26px;
+    width: 530px;
+    line-height: 120%;
+    & span {
+      font-size: 28px;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      text-decoration: underline;
+    }
+  }
+  &__button {
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+    border: solid 1px #ffffff;
+    padding: 23px 50px;
+    background-color: #ffffff;
+    &:hover {
+      background-color: #f2c94c;
+    }
+  }
+}
+.bottom {
+  &__head {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 1300px;
+    margin: 30px auto;
+  }
+  &__title {
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &__hint {
+    font-size: 18px;
+    line-height: 100%;
+    text-align: end;
+    color: #ffffff;
+  }
+  &__column {
+    background-image: url(/img/noize.png);
+    display: flex;
+    justify-content: center;
+    margin: 18px 0 0 0px;
+    padding: 0 50px 0 50px;
+  }
+  &__item {
+    padding: 20px 50px 20px 0;
+    margin: 20px 50px 20px 0px;
+    display: flex;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+    justify-content: center;
+    &:last-child {
+      border-right: none;
+      margin: 20px 0px 20px 0px;
+    }
+  }
+  &__icon {
+    height: 36px;
+  }
+  &__text {
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+    width: 270px;
+  }
+}
+
+.gallery {
+  &__title {
+    margin-top: 80px;
+  }
+  &__headtitle {
+    text-align: center;
+    font-family: Proxima Nova;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f2c94c;
+    letter-spacing: 10px;
+    line-height: 100%;
+    font-weight: bold;
+  }
+  &__subtitle {
+    margin-top: 17px;
+    font-family: Gilroy;
+    font-size: 42px;
+    line-height: 100%;
+    text-align: center;
+  }
+
+  &__menu {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item {
+    font-family: roboto;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+  &__link {
+    border: solid 2px #e9e9e9;
+    padding: 17px 30px;
+
+    &:hover {
+      transition: color 0.7s linear;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(252, 243, 214, 1) 0%,
+        rgba(250, 235, 187, 1) 2%,
+        rgba(242, 201, 76, 1) 56%,
+        rgba(242, 201, 76, 1) 100%
+      );
+      box-shadow: 0 10px 0 0 rgb(242, 201, 76)
+        linear-gradient(
+          90deg,
+          rgba(242, 201, 76, 1) 0%,
+          rgba(255, 255, 255, 1) 100%,
+          rgba(239, 137, 24, 1) 100%
+        );
+    }
+  }
+}
+
+.famyly-photo {
+  width: 1320px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+  }
+  &__zoom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(252, 243, 214, 1) 0%,
+      rgba(250, 235, 187, 1) 2%,
+      rgba(242, 201, 76, 1) 80%,
+      rgba(242, 201, 76, 1) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__card {
+  }
+  &__image {
+    z-index: 25;
+    display: block;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+}

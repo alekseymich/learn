@@ -1,0 +1,429 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: Proxima Nova;
+  src: url(/fonts/ProximaNovaCond-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url(/fonts/Gilroy-ExtraBold.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(/fonts/ProximaNovaCond-RegularIt.ttf);
+  font-style: italic;
+  font-weight: normal;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+}
+
+main {
+  background: url(/img/jakob-owens-oIPwvZIAp0o-unsplash.jpg) 50%/cover no-repeat;
+}
+
+.container {
+  height: 80px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1300px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0px;
+  width: 100%;
+  background-image: url(/img/noize.png);
+}
+
+.header__container {
+  height: 80px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1300px;
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: end;
+}
+
+.menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-list__item {
+  font-family: roboto;
+  font-size: 15px;
+  margin: 0 0 0 30px;
+  line-height: 100%;
+  text-align: flex-end;
+  color: #ffffff;
+}
+
+.menu-list__item:hover {
+  color: #f2c94c;
+}
+
+.title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 70px 0 0 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.title__head {
+  margin: 0 auto;
+  font-family: Gilroy;
+  font-size: 90px;
+  text-align: center;
+  width: 512px;
+  color: #ffffff;
+}
+
+.title__text {
+  color: #ffffff;
+  margin: 40px auto;
+  text-align: center;
+  font-family: roboto;
+  font-style: normal;
+  font-size: 26px;
+  width: 530px;
+  line-height: 120%;
+}
+
+.title__text span {
+  font-size: 28px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.title__button {
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  border: solid 1px #ffffff;
+  padding: 23px 50px;
+  background-color: #ffffff;
+}
+
+.title__button:hover {
+  background-color: #f2c94c;
+}
+
+.bottom__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1300px;
+  margin: 30px auto;
+}
+
+.bottom__title {
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.bottom__hint {
+  font-size: 18px;
+  line-height: 100%;
+  text-align: end;
+  color: #ffffff;
+}
+
+.bottom__column {
+  background-image: url(/img/noize.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 18px 0 0 0px;
+  padding: 0 50px 0 50px;
+}
+
+.bottom__item {
+  padding: 20px 50px 20px 0;
+  margin: 20px 50px 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bottom__item:last-child {
+  border-right: none;
+  margin: 20px 0px 20px 0px;
+}
+
+.bottom__icon {
+  height: 36px;
+}
+
+.bottom__text {
+  padding-left: 30px;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+  width: 270px;
+}
+
+.gallery__title {
+  margin-top: 80px;
+}
+
+.gallery__headtitle {
+  text-align: center;
+  font-family: Proxima Nova;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #f2c94c;
+  letter-spacing: 10px;
+  line-height: 100%;
+  font-weight: bold;
+}
+
+.gallery__subtitle {
+  margin-top: 17px;
+  font-family: Gilroy;
+  font-size: 42px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.gallery__menu {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery__item {
+  font-family: roboto;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.gallery__link {
+  border: solid 2px #e9e9e9;
+  padding: 17px 30px;
+}
+
+.gallery__link:hover {
+  -webkit-transition: color 0.7s linear;
+  transition: color 0.7s linear;
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(0%, #fcf3d6), color-stop(2%, #faebbb), color-stop(56%, #f2c94c), to(#f2c94c));
+  background: linear-gradient(90deg, white 0%, #fcf3d6 0%, #faebbb 2%, #f2c94c 56%, #f2c94c 100%);
+  -webkit-box-shadow: 0 10px 0 0 #f2c94c linear-gradient(90deg, #f2c94c 0%, white 100%, #ef8918 100%);
+          box-shadow: 0 10px 0 0 #f2c94c linear-gradient(90deg, #f2c94c 0%, white 100%, #ef8918 100%);
+}
+
+.famyly-photo {
+  width: 1320px;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.famyly-photo__item {
+  display: inline-block;
+  margin: 0 20px 20px 0;
+}
+
+.famyly-photo__zoom {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(0%, #fcf3d6), color-stop(2%, #faebbb), color-stop(80%, #f2c94c), to(#f2c94c));
+  background: linear-gradient(90deg, white 0%, #fcf3d6 0%, #faebbb 2%, #f2c94c 80%, #f2c94c 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.famyly-photo__zoom:hover {
+  opacity: 0.8;
+}
+
+.famyly-photo__image {
+  z-index: 25;
+  display: block;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.famyly-photo__image:hover {
+  opacity: 0.3;
+}
