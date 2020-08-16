@@ -30,13 +30,7 @@ main {
     no-repeat;
 }
 
-.container {
-  height: 80px;
-  justify-content: space-between;
-  margin: 0 auto;
-  display: flex;
-  width: 1300px;
-}
+
 .header {
   display: flex;
   top: 0px;
@@ -178,6 +172,7 @@ main {
 }
 
 .gallery {
+  margin-bottom: 60px;
   &__title {
     margin-top: 80px;
   }
@@ -288,4 +283,136 @@ main {
       opacity: 0.3;
     }
   }
+}
+
+.services {
+  background: #202020;
+  &__container {
+    width: 1300px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__title {
+    padding-top: 80px;
+    text-align: center;
+    font-family: Proxima Nova;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f2c94c;
+    letter-spacing: 10px;
+    line-height: 100%;
+    font-weight: bold;
+  }
+  &__subtitle {
+    margin-top: 17px;
+    font-family: Gilroy;
+    font-size: 42px;
+    line-height: 100%;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.card__container{
+  align-items: center;
+  
+  margin: 0 auto;
+  width: 1300px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.card {
+  margin-top: 50px;
+  border: 1px solid #c0c0c042;
+  &__title {
+    padding-top: 20px;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.2;
+    text-align: center;
+    
+  }
+  &__subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: #F2C94C;
+    border-bottom: 1px solid #c0c0c042;
+    padding-bottom: 20px;
+  }
+  &__list {
+    
+    padding: 40px ;
+    border-bottom: 1px solid #c0c0c042;
+    width: 340px;
+
+  }
+  &__icon{
+    padding: 5px 5px 0 0 ;
+    justify-content: center;
+    
+  }
+  &__text {
+    font-family:Roboto;
+    font-size: 18px;
+    line-height: 25px;
+    color: #ffffff;
+    opacity: 0.8;
+    padding: 10px 0 0 0px;
+    & span{
+      padding-left: 27px;
+    }  
+    &::before{
+      content: url(/img/galochka.png);
+      padding-right:10px ;
+    }
+    }
+  &__price {
+    margin-top: 30px;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    color: #ffffff;
+    text-align: center;
+  }
+  &__button {
+    display: inline-block;
+    
+    margin: 30px 60px;
+    padding: 20px 70px;
+    font-family: roboto;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333333;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(252, 243, 214, 1) 0%,
+      rgba(250, 235, 187, 1) 2%,
+      rgba(242, 201, 76, 1) 80%,
+      rgba(242, 201, 76, 1) 100%
+    );
+    border: 0.1px solid #F2C94C;
+  }
+}
+
+.text__off{
+  opacity: 0.3;
+}
+.card_shine{
+  border-color: #ffffff;
 }
