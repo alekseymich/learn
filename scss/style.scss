@@ -26,10 +26,8 @@ body {
   margin: 0 auto;
 }
 main {
-  background: url(/img/jakob-owens-oIPwvZIAp0o-unsplash.jpg) 50% / cover
-    no-repeat;
+  background: url(/img/jakob-owens-oIPwvZIAp0o-unsplash.jpg) 50% / cover no-repeat;
 }
-
 
 .header {
   display: flex;
@@ -178,7 +176,7 @@ main {
   }
   &__headtitle {
     text-align: center;
-    font-family: Proxima Nova;
+    font-family: Roboto;
     font-size: 18px;
     text-transform: uppercase;
     color: #f2c94c;
@@ -213,6 +211,7 @@ main {
   &__link {
     border: solid 2px #e9e9e9;
     padding: 17px 30px;
+    color: #333333;
 
     &:hover {
       transition: color 0.7s linear;
@@ -226,12 +225,7 @@ main {
         rgba(242, 201, 76, 1) 100%
       );
       box-shadow: 0 10px 0 0 rgb(242, 201, 76)
-        linear-gradient(
-          90deg,
-          rgba(242, 201, 76, 1) 0%,
-          rgba(255, 255, 255, 1) 100%,
-          rgba(239, 137, 24, 1) 100%
-        );
+        linear-gradient(90deg, rgba(242, 201, 76, 1) 0%, rgba(255, 255, 255, 1) 100%, rgba(239, 137, 24, 1) 100%);
     }
   }
 }
@@ -296,7 +290,7 @@ main {
   &__title {
     padding-top: 80px;
     text-align: center;
-    font-family: Proxima Nova;
+    font-family: Roboto;
     font-size: 18px;
     text-transform: uppercase;
     color: #f2c94c;
@@ -312,83 +306,81 @@ main {
     text-align: center;
     color: #ffffff;
   }
+  &__cards {
+    align-items: center;
+    margin: 0 auto;
+    width: 1300px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.card__container{
-  align-items: center;
-  
-  margin: 0 auto;
-  width: 1300px;
-  display: flex;
-  justify-content: space-between;
-
-}
 .card {
+  width: 400px;
   margin-top: 50px;
   border: 1px solid #c0c0c042;
+  margin-bottom: 80px;
   &__title {
     padding-top: 20px;
     font-size: 15px;
     line-height: 140%;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.2;
     text-align: center;
-    
   }
   &__subtitle {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-style: italic;
     font-weight: bold;
     font-size: 34px;
     line-height: 100%;
     text-align: center;
     letter-spacing: -0.5px;
-    color: #F2C94C;
+    color: #f2c94c;
     border-bottom: 1px solid #c0c0c042;
     padding-bottom: 20px;
   }
   &__list {
-    
-    padding: 40px ;
-    border-bottom: 1px solid #c0c0c042;
-    width: 340px;
+    padding: 40px;
 
+    width: 340px;
   }
-  &__icon{
-    padding: 5px 5px 0 0 ;
+  &__icon {
+    padding: 5px 5px 0 0;
     justify-content: center;
-    
   }
   &__text {
-    font-family:Roboto;
+    width: 340px;
+    font-family: Roboto;
     font-size: 18px;
     line-height: 25px;
     color: #ffffff;
     opacity: 0.8;
     padding: 10px 0 0 0px;
-    & span{
+    & span {
       padding-left: 27px;
-    }  
-    &::before{
+    }
+    &::before {
       content: url(/img/galochka.png);
-      padding-right:10px ;
+      padding-right: 10px;
     }
-    }
+  }
   &__price {
-    margin-top: 30px;
+    padding-top: 30px;
     font-family: Roboto;
     font-weight: 600;
     font-size: 36px;
     line-height: 100%;
     color: #ffffff;
     text-align: center;
+    border-top: 1px solid #c0c0c042;
   }
   &__button {
     display: inline-block;
-    
-    margin: 30px 60px;
+
+    margin: 30px 95px;
     padding: 20px 70px;
     font-family: roboto;
     font-size: 14px;
@@ -406,13 +398,168 @@ main {
       rgba(242, 201, 76, 1) 80%,
       rgba(242, 201, 76, 1) 100%
     );
-    border: 0.1px solid #F2C94C;
+    border: 0.1px solid #f2c94c;
   }
 }
 
-.text__off{
+.team {
+  display: flex;
+  background: url(/img/team/bg.jpg) 0 0/100% 100% no-repeat;
+
+  &__photo {
+    display: flex;
+    width: 50%;
+  }
+  &__image {
+    display: inline-block;
+    padding-top: 80px;
+    margin: 0 auto;
+    vertical-align: bottom;
+  }
+
+  &__discription {
+    width: 50%;
+    background: url(/img/team/textback.png) 0 0/100% 100% no-repeat;
+  }
+  &__container {
+    padding: 80px 80px 40px 80px;
+  }
+  &__title {
+    margin-bottom: 25px;
+    font-family: Roboto;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f2c94c;
+    letter-spacing: 10px;
+    line-height: 100%;
+    font-weight: bold;
+  }
+  &__subtitle {
+    font-family: Gilroy;
+    font-size: 42px;
+    line-height: 100%;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+  &__text {
+    padding-bottom: 40px;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 140%;
+
+    color: rgba(255, 255, 255, 0.8);
+    & span {
+      color: #f2c94c;
+    }
+  }
+}
+
+.text__off {
   opacity: 0.3;
 }
-.card_shine{
+.card_shine {
   border-color: #ffffff;
+}
+
+.reviews {
+  &__title {
+    margin: 0 auto;
+    width: 660px;
+  }
+  &__headtitle {
+    margin-top: 80px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f2c94c;
+    letter-spacing: 10px;
+    line-height: 100%;
+    font-weight: bold;
+  }
+  &__subtitle {
+    margin-top: 17px;
+    font-family: Gilroy;
+    font-size: 34px;
+    line-height: 120%;
+    text-align: center;
+    &__icon {
+      padding-top: 8px;
+    }
+    & span {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+  &__slides {
+  }
+}
+
+.slide {
+  margin: 50px auto;
+  width: 860px;
+  display: flex;
+  min-width: 0;
+  &__photo {
+    min-width: 0;
+  }
+  &__discription {
+    height: 240px;
+    padding: 40px 50px 0px 0px;
+    margin: 60px 0 17px 0px;
+    padding-left: 50px;
+    border: 2px solid #e9e9e9;
+  }
+  &__title {
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: -0.3px;
+    color: #333333;
+    font-weight: 700;
+    min-width: 0;
+  }
+  &__text {
+    margin-bottom: 21px;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.3px;
+    width: 420px;
+    color: #707070;
+  }
+  &__user {
+    display: flex;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.3px;
+    color: #505050;
+    font-weight: 700;
+  }
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+.slider {
+  position: relative;
+}
+.slick-arrow {
+  position: absolute;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  font-size: 0px;
+}
+.slick-arrow.slick-prev {
+  left: 100px;
+  background: url(/img/revievs/Left.png) 0 0 / 100% no-repeat;
+}
+
+.slick-arrow.slick-next {
+  right: 100px;
+  background: url(/img/revievs/Right.png) 0 0 / 100% no-repeat;
 }

@@ -2,12 +2,21 @@
 <html lang="en">
   <head>
     <title>Photosession</title>
-    <link rel="stylesheet" href="/css/style.css" />
     <meta charset="UTF-8" />
     <meta
       name="content-type"
       content="width=device-width, initial-scale= 1.0,"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <main>
@@ -139,61 +148,179 @@
         <h3 class="services__title">услуги и цены</h3>
         <h2 class="services__subtitle">Сколько стоят наши услуги</h2>
       </div>
-      <div class="card__container">
-      <div class="card">
-        <div class="card__title">Пакет</div>
-        <div class="card__subtitle">Лёгкий</div>
-        <ul class="card__list">
-          <li class="card__text">Съёмка и обработка 60 фотографий</li>
-          <li class="card__text">USB-флешка с фото</li>
-          <li class="card__text">10 одноминутных видео для <span>Instagram</span></li>
-          <li class="card__text text__off">Аренда платья на фотосессию</li>
-          <li class="card__text text__off">Аренда квадрокоптера</li>
-          <li class="card__text text__off">Доставка в живописные места <span>Анталии</span></li>
-        </ul>
-        <div class="card__price">7 000 ₽</div>
-        <a class="card__button" href="">Заказать</a>
+      <div class="services__cards">
+        <div class="card">
+          <div class="card__title">Пакет</div>
+          <div class="card__subtitle">Лёгкий</div>
+          <ul class="card__list">
+            <li class="card__text">Съёмка и обработка 60 фотографий</li>
+            <li class="card__text">USB-флешка с фото</li>
+            <li class="card__text">
+              10 одноминутных видео для <span>Instagram</span>
+            </li>
+            <li class="card__text text__off">Аренда платья на фотосессию</li>
+            <li class="card__text text__off">Аренда квадрокоптера</li>
+            <li class="card__text text__off">
+              Доставка в живописные места <span>Анталии</span>
+            </li>
+          </ul>
+          <div class="card__price">7 000 ₽</div>
+          <a class="card__button" href="">Заказать</a>
+        </div>
+        <div class="card card_shine">
+          <div class="card__title">Пакет</div>
+          <div class="card__subtitle">Премиум</div>
+          <ul class="card__list">
+            <li class="card__text">Съёмка и обработка 60 фотографий</li>
+            <li class="card__text">USB-флешка с фото</li>
+            <li class="card__text">
+              10 одноминутных видео для <span>Instagram</span>
+            </li>
+            <li class="card__text">Аренда платья на фотосессию</li>
+            <li class="card__text">Аренда квадрокоптера</li>
+            <li class="card__text">
+              Доставка в живописные места <span>Анталии</span>
+            </li>
+          </ul>
+          <div class="card__price">12 000 ₽</div>
+          <a class="card__button" href="">Заказать</a>
+        </div>
+        <div class="card">
+          <div class="card__title">Пакет</div>
+          <div class="card__subtitle">Стандарт</div>
+          <ul class="card__list">
+            <li class="card__text">Съёмка и обработка 80 фотографий</li>
+            <li class="card__text">USB-флешка с фото</li>
+            <li class="card__text">
+              15 одноминутных видео для <span>Instagram</span>
+            </li>
+            <li class="card__text">Аренда платья на фотосессию</li>
+            <li class="card__text text__off">Аренда квадрокоптера</li>
+            <li class="card__text text__off">
+              Доставка в живописные места <span>Анталии</span>
+            </li>
+          </ul>
+          <div class="card__price">9 000 ₽</div>
+          <a class="card__button" href="">Заказать</a>
+        </div>
       </div>
-      <div class="card card_shine">
-        <div class="card__title">Пакет</div>
-        <div class="card__subtitle">Премиум</div>
-        <ul class="card__list">
-          <li class="card__text">Съёмка и обработка 60 фотографий</li>
-          <li class="card__text">USB-флешка с фото</li>
-          <li class="card__text">10 одноминутных видео для <span>Instagram</span></li>
-          <li class="card__text">Аренда платья на фотосессию</li>
-          <li class="card__text">Аренда квадрокоптера</li>
-          <li class="card__text">Доставка в живописные места <span>Анталии</span></li>
-        </ul>
-        <div class="card__price">12 000 ₽</div>
-        <a class="card__button" href="">Заказать</a>
+    </section>
+    <section class="team">
+      <div class="team__photo">
+        <img class="team__image" src="/img/team/Group.png" alt="" />
       </div>
-      <div class="card">
-        <div class="card__title">Пакет</div>
-        <div class="card__subtitle">Стандарт</div>
-        <ul class="card__list">
-          <li class="card__text">Съёмка и обработка 80 фотографий</li>
-          <li class="card__text">USB-флешка с фото</li>
-          <li class="card__text">15 одноминутных видео для <span>Instagram</span></li>
-          <li class="card__text">Аренда платья на фотосессию</li>
-          <li class="card__text text__off">Аренда квадрокоптера</li>
-          <li class="card__text text__off">Доставка в живописные места <span>Анталии</span></li>
-        </ul>
-        <div class="card__price">9 000 ₽</div>
-        <a class="card__button" href="">Заказать</a>
+      <div class="team__discription">
+        <div class="team__container">
+          <div class="team__title">Наша команда</div>
+          <div class="team__subtitle">
+            Посмотрите 2-минутное видео о нас, чтобы лучше понять, как проходят
+            наши фотосессии
+          </div>
+          <p class="team__text">
+            Делаем так, чтобы воспоминания об отдыхе остались у вас на всю
+            жизнь. Для этого заранее продумываем сюжет и подбираем интересные
+            геолокации . <span> Наша цель</span> - создавать атмосферные
+            фотографии, которые передают сюжет и рассказывают историю .
+          </p>
+          <p class="team__text">
+            Ладим с детьми, знаем уникальные места вблизи Анталии, помогаем
+            позировать, умеем смешить и ловить мгновения. На наших фотографиях
+            вы будете выглядеть естественно красиво, даже если это ваша первая
+            съемка. А чтобы убедиться, что вам с нами будет комфортно,<a href=""
+              >посмотрите 2-минутное видео</a
+            >
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
+    <section class="reviews">
+      <div class="reviews__title">
+        <h3 class="reviews__headtitle">отзывы</h3>
+        <h2 class="reviews__subtitle">
+          Узнайте, что пишут о нас наши клиенты в своих <span>Instagram</span>
+          <img class="reviews__subtitle__icon" src="/img/inst.png" alt="" />
+          аккаунтах
+        </h2>
+      </div>
+      <div class="reviews__slides">
+        <div>
+          <div class="slide">
+            <div class="slide__photo">
+              <img src="/img/revievs/photo.png" alt="" />
+            </div>
+            <div class="slide__discription">
+              <div class="slide__title">Просто восторг!</div>
+              <div class="slide__text">
+                Анталия, берег средиземного моря! Получила массу удовольствия от
+                фотосесси с ребятами из photiguide.biz Спасибо! Получила массу
+                удовольствия от фотосессии! Всех подруг отправляю к вам!
+              </div>
+              <div class="slide__user">
+                <img
+                  class="slide__icon"
+                  src="/img/revievs/inslogot.png"
+                  alt=""
+                />@Masha_Sharapova
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="slide">
+            <div class="slide__photo">
+              <img src="/img/revievs/photo.png" alt="" />
+            </div>
+            <div class="slide__discription">
+              <div class="slide__title">Просто восторг!</div>
+              <div class="slide__text">
+                Анталия, берег средиземного моря! Получила массу удовольствия от
+                фотосесси с ребятами из photiguide.biz Спасибо! Получила массу
+                удовольствия от фотосессии! Всех подруг отправляю к вам!
+              </div>
+              <div class="slide__user">
+                <img
+                  class="slide__icon"
+                  src="/img/revievs/inslogot.png"
+                  alt=""
+                />@Masha_Sharapova
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="slide">
+            <div class="slide__photo">
+              <img src="/img/revievs/photo.png" alt="" />
+            </div>
+            <div class="slide__discription">
+              <div class="slide__title">Просто восторг!</div>
+              <div class="slide__text">
+                Анталия, берег средиземного моря! Получила массу удовольствия от
+                фотосесси с ребятами из photiguide.biz Спасибо! Получила массу
+                удовольствия от фотосессии! Всех подруг отправляю к вам!
+              </div>
+              <div class="slide__user">
+                <img
+                  class="slide__icon"
+                  src="/img/revievs/inslogot.png"
+                  alt=""
+                />@Masha_Sharapova
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
     ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
-    />
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="/js/masonry.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="/js/main.js"></script>
   </body>
 </html>

@@ -304,7 +304,7 @@ main {
 
 .gallery__headtitle {
   text-align: center;
-  font-family: Proxima Nova;
+  font-family: Roboto;
   font-size: 18px;
   text-transform: uppercase;
   color: #f2c94c;
@@ -348,6 +348,7 @@ main {
 .gallery__link {
   border: solid 2px #e9e9e9;
   padding: 17px 30px;
+  color: #333333;
 }
 
 .gallery__link:hover {
@@ -436,7 +437,7 @@ main {
 .services__title {
   padding-top: 80px;
   text-align: center;
-  font-family: Proxima Nova;
+  font-family: Roboto;
   font-size: 18px;
   text-transform: uppercase;
   color: #f2c94c;
@@ -454,7 +455,7 @@ main {
   color: #ffffff;
 }
 
-.card__container {
+.services__cards {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -469,8 +470,10 @@ main {
 }
 
 .card {
+  width: 400px;
   margin-top: 50px;
   border: 1px solid #c0c0c042;
+  margin-bottom: 80px;
 }
 
 .card__title {
@@ -479,27 +482,26 @@ main {
   line-height: 140%;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.2;
   text-align: center;
 }
 
 .card__subtitle {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: bold;
   font-size: 34px;
   line-height: 100%;
   text-align: center;
   letter-spacing: -0.5px;
-  color: #F2C94C;
+  color: #f2c94c;
   border-bottom: 1px solid #c0c0c042;
   padding-bottom: 20px;
 }
 
 .card__list {
   padding: 40px;
-  border-bottom: 1px solid #c0c0c042;
   width: 340px;
 }
 
@@ -511,6 +513,7 @@ main {
 }
 
 .card__text {
+  width: 340px;
   font-family: Roboto;
   font-size: 18px;
   line-height: 25px;
@@ -529,18 +532,19 @@ main {
 }
 
 .card__price {
-  margin-top: 30px;
+  padding-top: 30px;
   font-family: Roboto;
   font-weight: 600;
   font-size: 36px;
   line-height: 100%;
   color: #ffffff;
   text-align: center;
+  border-top: 1px solid #c0c0c042;
 }
 
 .card__button {
   display: inline-block;
-  margin: 30px 60px;
+  margin: 30px 95px;
   padding: 20px 70px;
   font-family: roboto;
   font-size: 14px;
@@ -552,7 +556,68 @@ main {
   background: white;
   background: -webkit-gradient(linear, left top, right top, from(white), color-stop(0%, #fcf3d6), color-stop(2%, #faebbb), color-stop(80%, #f2c94c), to(#f2c94c));
   background: linear-gradient(90deg, white 0%, #fcf3d6 0%, #faebbb 2%, #f2c94c 80%, #f2c94c 100%);
-  border: 0.1px solid #F2C94C;
+  border: 0.1px solid #f2c94c;
+}
+
+.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url(/img/team/bg.jpg) 0 0/100% 100% no-repeat;
+}
+
+.team__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.team__image {
+  display: inline-block;
+  padding-top: 80px;
+  margin: 0 auto;
+  vertical-align: bottom;
+}
+
+.team__discription {
+  width: 50%;
+  background: url(/img/team/textback.png) 0 0/100% 100% no-repeat;
+}
+
+.team__container {
+  padding: 80px 80px 40px 80px;
+}
+
+.team__title {
+  margin-bottom: 25px;
+  font-family: Roboto;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #f2c94c;
+  letter-spacing: 10px;
+  line-height: 100%;
+  font-weight: bold;
+}
+
+.team__subtitle {
+  font-family: Gilroy;
+  font-size: 42px;
+  line-height: 100%;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.team__text {
+  padding-bottom: 40px;
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.team__text span {
+  color: #f2c94c;
 }
 
 .text__off {
@@ -561,4 +626,119 @@ main {
 
 .card_shine {
   border-color: #ffffff;
+}
+
+.reviews__title {
+  margin: 0 auto;
+  width: 660px;
+}
+
+.reviews__headtitle {
+  margin-top: 80px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #f2c94c;
+  letter-spacing: 10px;
+  line-height: 100%;
+  font-weight: bold;
+}
+
+.reviews__subtitle {
+  margin-top: 17px;
+  font-family: Gilroy;
+  font-size: 34px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.reviews__subtitle__icon {
+  padding-top: 8px;
+}
+
+.reviews__subtitle span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.slide {
+  margin: 50px auto;
+  width: 860px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 0;
+}
+
+.slide__photo {
+  min-width: 0;
+}
+
+.slide__discription {
+  height: 240px;
+  padding: 40px 50px 0px 0px;
+  margin: 60px 0 17px 0px;
+  padding-left: 50px;
+  border: 2px solid #e9e9e9;
+}
+
+.slide__title {
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.3px;
+  color: #333333;
+  font-weight: 700;
+  min-width: 0;
+}
+
+.slide__text {
+  margin-bottom: 21px;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.3px;
+  width: 420px;
+  color: #707070;
+}
+
+.slide__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.3px;
+  color: #505050;
+  font-weight: 700;
+}
+
+.slide__icon {
+  margin-right: 10px;
+}
+
+.slider {
+  position: relative;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  font-size: 0px;
+}
+
+.slick-arrow.slick-prev {
+  left: 100px;
+  background: url(/img/revievs/Left.png) 0 0/100% no-repeat;
+}
+
+.slick-arrow.slick-next {
+  right: 100px;
+  background: url(/img/revievs/Right.png) 0 0/100% no-repeat;
 }

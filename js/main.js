@@ -3,3 +3,5 @@ $(window).on("load", function () {
     itemSelector: ".famyly-photo__item",
   });
 });
+
+$(".reviews__slides").slick();
