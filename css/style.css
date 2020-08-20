@@ -99,6 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 .body {
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .body__lock {
@@ -116,6 +117,12 @@ main {
   top: 0px;
   width: 100%;
   background-image: url(/img/noize.png);
+}
+
+@media screen and (max-width: 880px) {
+  .header {
+    width: 95%;
+  }
 }
 
 .header__container {
@@ -143,6 +150,12 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 442px) {
+  .header__logo {
+    display: none;
+  }
 }
 
 .header__toggle {
@@ -233,6 +246,7 @@ main {
   min-width: 320px;
   font-size: 50px;
   font-family: Roboto;
+  font-weight: 700;
   background-image: url(/img/noize.png);
   display: block;
 }
@@ -878,6 +892,13 @@ main {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 880px) {
+  .reviews__slides {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
 .slide {
   position: relative;
   margin: 50px auto;
@@ -885,12 +906,23 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 0;
+}
+
+@media screen and (max-width: 880px) {
+  .slide {
+    display: block;
+  }
 }
 
 .slide__photo {
   position: absolute;
   top: 20px;
+}
+
+@media screen and (max-width: 880px) {
+  .slide__photo {
+    position: unset;
+  }
 }
 
 .slide__discription {
@@ -899,6 +931,13 @@ main {
   margin: 60px 0 17px 0px;
   padding-left: 350px;
   border: 2px solid #e9e9e9;
+}
+
+@media screen and (max-width: 880px) {
+  .slide__discription {
+    text-align: center;
+    margin: unset;
+  }
 }
 
 .slide__title {
@@ -917,7 +956,7 @@ main {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.3px;
-  width: 420px;
+  max-width: 420px;
   color: #707070;
 }
 
@@ -949,9 +988,16 @@ main {
   font-size: 0px;
 }
 
+@media screen and (max-width: 1190px) {
+  .slick-arrow {
+    top: 0;
+  }
+}
+
 .slick-arrow.slick-prev {
   left: 100px;
   background: url(/img/revievs/Left.png) 0 0/100% no-repeat;
+  z-index: 250;
 }
 
 .slick-arrow.slick-next {
@@ -961,6 +1007,12 @@ main {
 
 .contacts {
   background: #202020;
+}
+
+@media screen and (max-width: 470px) {
+  .contacts {
+    width: 90%;
+  }
 }
 
 .contacts__headtitle {
