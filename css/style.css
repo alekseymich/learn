@@ -96,9 +96,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-body {
+.body {
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
+}
+
+.body__lock {
+  overflow: hidden;
 }
 
 main {
@@ -126,6 +130,12 @@ main {
   width: 1300px;
 }
 
+@media screen and (max-width: 1300px) {
+  .header__container {
+    width: 90%;
+  }
+}
+
 .header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,11 +145,46 @@ main {
           align-items: center;
 }
 
+.header__toggle {
+  margin-left: auto;
+  background: url(/img/icons8-menu-52.png) center no-repeat;
+  width: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .header__toggle {
+    display: block;
+  }
+}
+
+.header__toggle-active {
+  background: url(/img/icons8-delete-50.png) center no-repeat;
+  width: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .header__toggle-active {
+    display: block;
+  }
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: end;
+}
+
+@media screen and (max-width: 850px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 }
 
 .menu-list {
@@ -154,8 +199,14 @@ main {
           align-items: center;
 }
 
+@media screen and (max-width: 850px) {
+  .menu-list {
+    display: none;
+  }
+}
+
 .menu-list__item {
-  font-family: roboto;
+  font-family: Roboto;
   font-size: 15px;
   margin: 0 0 0 30px;
   line-height: 100%;
@@ -165,6 +216,31 @@ main {
 
 .menu-list__item:hover {
   color: #f2c94c;
+}
+
+@media screen and (max-width: 850px) {
+  .menu-list__item {
+    font-size: 30px;
+  }
+}
+
+.menu-list__show {
+  text-align: left;
+  position: fixed;
+  margin: 80px 0 0 0;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+  font-size: 50px;
+  font-family: Roboto;
+  background-image: url(/img/noize.png);
+  display: block;
+}
+
+@media screen and (min-width: 850px) {
+  .menu-list__show {
+    display: none;
+  }
 }
 
 .title {
@@ -179,13 +255,35 @@ main {
   text-align: center;
 }
 
+.title__container {
+  margin: 0 0 0 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .title__container {
+    width: 90%;
+  }
+}
+
 .title__head {
   margin: 0 auto;
   font-family: Gilroy;
   font-size: 90px;
   text-align: center;
-  width: 512px;
+  max-width: 512px;
   color: #ffffff;
+}
+
+@media screen and (max-width: 850px) {
+  .title__head {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .title__head {
+    font-size: 50px;
+  }
 }
 
 .title__text {
@@ -195,7 +293,7 @@ main {
   font-family: roboto;
   font-style: normal;
   font-size: 26px;
-  width: 530px;
+  max-width: 530px;
   line-height: 120%;
 }
 
@@ -235,8 +333,14 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 1300px;
+  max-width: 1300px;
   margin: 30px auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .bottom__head {
+    width: 90%;
+  }
 }
 
 .bottom__title {
@@ -265,6 +369,15 @@ main {
   padding: 0 50px 0 50px;
 }
 
+@media screen and (max-width: 1024px) {
+  .bottom__column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .bottom__item {
   padding: 20px 50px 20px 0;
   margin: 20px 50px 20px 0px;
@@ -277,9 +390,27 @@ main {
           justify-content: center;
 }
 
+@media screen and (max-width: 1205px) {
+  .bottom__item {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bottom__item {
+    border-right: none;
+  }
+}
+
 .bottom__item:last-child {
   border-right: none;
   margin: 20px 0px 20px 0px;
+}
+
+@media (max-width: 1024px) {
+  .bottom__item:last-child {
+    margin: 20px 50px 20px 0px;
+  }
 }
 
 .bottom__icon {
@@ -362,7 +493,7 @@ main {
 }
 
 .famyly-photo {
-  width: 1320px;
+  max-width: 1320px;
   margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -437,12 +568,18 @@ main {
 }
 
 .services__container {
-  width: 1300px;
+  max-width: 1300px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
   margin: 0 auto;
+}
+
+@media (max-width: 1320px) {
+  .services__container {
+    max-width: 1000px;
+  }
 }
 
 .services__title {
@@ -471,7 +608,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  width: 1300px;
+  max-width: 1300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,11 +617,36 @@ main {
           justify-content: space-between;
 }
 
+@media (max-width: 1320px) {
+  .services__cards {
+    max-width: 1000px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 1030px) {
+  .services__cards {
+    max-width: 1000px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .card {
-  width: 400px;
+  max-width: 400px;
   margin-top: 50px;
   border: 1px solid #c0c0c042;
   margin-bottom: 80px;
+}
+
+@media (max-width: 1225px) {
+  .card {
+    max-width: 350px;
+  }
 }
 
 .card__title {
@@ -513,7 +675,7 @@ main {
 
 .card__list {
   padding: 40px;
-  width: 340px;
+  max-width: 340px;
 }
 
 .card__icon {
@@ -524,7 +686,7 @@ main {
 }
 
 .card__text {
-  width: 340px;
+  max-width: 340px;
   font-family: Roboto;
   font-size: 18px;
   line-height: 25px;
@@ -570,11 +732,27 @@ main {
   border: 0.1px solid #f2c94c;
 }
 
+@media screen and (max-width: 1205px) {
+  .card__button {
+    margin: 20px 60px;
+  }
+}
+
 .team {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: url(/img/team/bg.jpg) 0 0/100% 100% no-repeat;
+}
+
+@media screen and (max-width: 1205px) {
+  .team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+  }
 }
 
 .team__photo {
@@ -584,6 +762,15 @@ main {
   width: 50%;
 }
 
+@media screen and (max-width: 1205px) {
+  .team__photo {
+    margin: 0 auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .team__image {
   display: inline-block;
   padding-top: 80px;
@@ -591,9 +778,25 @@ main {
   vertical-align: bottom;
 }
 
+@media screen and (max-width: 900px) {
+  .team__image {
+    width: 90%;
+  }
+}
+
 .team__discription {
   width: 50%;
   background: url(/img/team/textback.png) 0 0/100% 100% no-repeat;
+}
+
+@media screen and (max-width: 1205px) {
+  .team__discription {
+    margin: 0 auto;
+    width: auto;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
 }
 
 .team__container {
@@ -641,7 +844,7 @@ main {
 
 .reviews__title {
   margin: 0 auto;
-  width: 660px;
+  max-width: 660px;
 }
 
 .reviews__headtitle {
@@ -678,7 +881,7 @@ main {
 .slide {
   position: relative;
   margin: 50px auto;
-  width: 860px;
+  max-width: 860px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -774,7 +977,7 @@ main {
 
 .contacts__subtitle {
   margin: 17px auto;
-  width: 1024px;
+  max-width: 1024px;
   font-family: Gilroy;
   font-size: 34px;
   line-height: 120%;
@@ -783,8 +986,14 @@ main {
 }
 
 .icons {
-  width: 800px;
+  max-width: 800px;
   margin: 60px auto;
+}
+
+@media screen and (max-width: 800px) {
+  .icons {
+    max-width: 400px;
+  }
 }
 
 .icons__link {
@@ -802,6 +1011,12 @@ main {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  .request__title {
+    font-size: 35px;
+  }
+}
+
 .request__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -809,6 +1024,18 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .request__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .request__input {
@@ -841,7 +1068,7 @@ main {
 
 .request__postcript {
   margin: 20px auto;
-  width: 860px;
+  max-width: 860px;
   font-family: Roboto;
   font-size: 13px;
   line-height: 150%;
@@ -853,6 +1080,12 @@ main {
 .request__postcript a {
   color: #ffffff;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .request__postcript {
+    font-size: 20px;
+  }
 }
 
 .footer__text {

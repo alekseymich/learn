@@ -21,13 +21,15 @@
   font-weight: normal;
 }
 
-body {
+.body {
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
+  &__lock {
+    overflow: hidden;
+  }
 }
 main {
-  background: url(/img/jakob-owens-oIPwvZIAp0o-unsplash.jpg) 50% / cover
-    no-repeat;
+  background: url(/img/jakob-owens-oIPwvZIAp0o-unsplash.jpg) 50% / cover no-repeat;
 }
 
 .header {
@@ -42,22 +44,52 @@ main {
     margin: 0 auto;
     display: flex;
     width: 1300px;
+    @media screen and (max-width: 1300px) {
+      width: 90%;
+    }
   }
   &__logo {
     display: flex;
     align-items: center;
   }
+  &__toggle {
+    margin-left: auto;
+    background: url(/img/icons8-menu-52.png) center no-repeat;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: 850px) {
+      display: block;
+    }
+  }
+  &__toggle-active {
+    background: url(/img/icons8-delete-50.png) center no-repeat;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: 850px) {
+      display: block;
+    }
+  }
 }
 .menu {
   display: flex;
   text-align: end;
+  @media screen and (max-width: 850px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 
   &-list {
     display: flex;
     justify-content: right;
     align-items: center;
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
     &__item {
-      font-family: roboto;
+      font-family: Roboto;
       font-size: 15px;
       margin: 0 0 0 30px;
       line-height: 100%;
@@ -65,6 +97,24 @@ main {
       color: #ffffff;
       &:hover {
         color: #f2c94c;
+      }
+      @media screen and (max-width: 850px) {
+        font-size: 30px;
+      }
+    }
+    &__show {
+      text-align: left;
+      position: fixed;
+      margin: 80px 0 0 0;
+      top: 0;
+      left: 0;
+      min-width: 320px;
+      font-size: 50px;
+      font-family: Roboto;
+      background-image: url(/img/noize.png);
+      display: block;
+      @media screen and (min-width: 850px) {
+        display: none;
       }
     }
   }
@@ -76,14 +126,26 @@ main {
   margin: 70px 0 0 0;
   justify-content: center;
   text-align: center;
+  &__container {
+    margin: 0 0 0 20px;
+    @media screen and (max-width: 600px) {
+      width: 90%;
+    }
+  }
 
   &__head {
     margin: 0 auto;
     font-family: Gilroy;
     font-size: 90px;
     text-align: center;
-    width: 512px;
+    max-width: 512px;
     color: #ffffff;
+    @media screen and (max-width: 850px) {
+      font-size: 80px;
+    }
+    @media screen and (max-width: 490px) {
+      font-size: 50px;
+    }
   }
   &__text {
     color: #ffffff;
@@ -92,7 +154,7 @@ main {
     font-family: roboto;
     font-style: normal;
     font-size: 26px;
-    width: 530px;
+    max-width: 530px;
     line-height: 120%;
     & span {
       font-size: 28px;
@@ -124,8 +186,11 @@ main {
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    width: 1300px;
+    max-width: 1300px;
     margin: 30px auto;
+    @media screen and (max-width: 1400px) {
+      width: 90%;
+    }
   }
   &__title {
     font-size: 18px;
@@ -145,17 +210,28 @@ main {
     justify-content: center;
     margin: 18px 0 0 0px;
     padding: 0 50px 0 50px;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
   }
   &__item {
     padding: 20px 50px 20px 0;
     margin: 20px 50px 20px 0px;
     display: flex;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
-
     justify-content: center;
+    @media screen and (max-width: 1205px) {
+      padding: 0;
+    }
+    @media screen and(max-width: 1024px) {
+      border-right: none;
+    }
     &:last-child {
       border-right: none;
       margin: 20px 0px 20px 0px;
+      @media (max-width: 1024px) {
+        margin: 20px 50px 20px 0px;
+      }
     }
   }
   &__icon {
@@ -226,18 +302,13 @@ main {
         rgba(242, 201, 76, 1) 100%
       );
       box-shadow: 0 10px 0 0 rgb(242, 201, 76)
-        linear-gradient(
-          90deg,
-          rgba(242, 201, 76, 1) 0%,
-          rgba(255, 255, 255, 1) 100%,
-          rgba(239, 137, 24, 1) 100%
-        );
+        linear-gradient(90deg, rgba(242, 201, 76, 1) 0%, rgba(255, 255, 255, 1) 100%, rgba(239, 137, 24, 1) 100%);
     }
   }
 }
 
 .famyly-photo {
-  width: 1320px;
+  max-width: 1320px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -293,10 +364,13 @@ main {
 .services {
   background: #202020;
   &__container {
-    width: 1300px;
+    max-width: 1300px;
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    @media (max-width: 1320px) {
+      max-width: 1000px;
+    }
   }
   &__title {
     padding-top: 80px;
@@ -320,17 +394,28 @@ main {
   &__cards {
     align-items: center;
     margin: 0 auto;
-    width: 1300px;
+    max-width: 1300px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1320px) {
+      max-width: 1000px;
+      justify-content: center;
+    }
+    @media (max-width: 1030px) {
+      max-width: 1000px;
+      flex-direction: column;
+    }
   }
 }
 
 .card {
-  width: 400px;
+  max-width: 400px;
   margin-top: 50px;
   border: 1px solid #c0c0c042;
   margin-bottom: 80px;
+  @media (max-width: 1225px) {
+    max-width: 350px;
+  }
   &__title {
     padding-top: 20px;
     font-size: 15px;
@@ -356,14 +441,14 @@ main {
   &__list {
     padding: 40px;
 
-    width: 340px;
+    max-width: 340px;
   }
   &__icon {
     padding: 5px 5px 0 0;
     justify-content: center;
   }
   &__text {
-    width: 340px;
+    max-width: 340px;
     font-family: Roboto;
     font-size: 18px;
     line-height: 25px;
@@ -410,27 +495,46 @@ main {
       rgba(242, 201, 76, 1) 100%
     );
     border: 0.1px solid #f2c94c;
+    @media screen and (max-width: 1205px) {
+      margin: 20px 60px;
+    }
   }
 }
 
 .team {
   display: flex;
   background: url(/img/team/bg.jpg) 0 0/100% 100% no-repeat;
+  @media screen and (max-width: 1205px) {
+    display: flex;
+    flex-flow: wrap;
+  }
 
   &__photo {
     display: flex;
     width: 50%;
+    @media screen and (max-width: 1205px) {
+      margin: 0 auto;
+      order: 1;
+    }
   }
   &__image {
     display: inline-block;
     padding-top: 80px;
     margin: 0 auto;
     vertical-align: bottom;
+    @media screen and (max-width: 900px) {
+      width: 90%;
+    }
   }
 
   &__discription {
     width: 50%;
     background: url(/img/team/textback.png) 0 0/100% 100% no-repeat;
+    @media screen and (max-width: 1205px) {
+      margin: 0 auto;
+      width: auto;
+      order: 0;
+    }
   }
   &__container {
     padding: 80px 80px 40px 80px;
@@ -464,9 +568,10 @@ main {
     }
   }
 }
-
-.text__off {
-  opacity: 0.3;
+.text {
+  &__off {
+    opacity: 0.3;
+  }
 }
 .card_shine {
   border-color: #ffffff;
@@ -475,7 +580,7 @@ main {
 .reviews {
   &__title {
     margin: 0 auto;
-    width: 660px;
+    max-width: 660px;
   }
   &__headtitle {
     margin-top: 80px;
@@ -511,7 +616,7 @@ main {
 .slide {
   position: relative;
   margin: 50px auto;
-  width: 860px;
+  max-width: 860px;
   display: flex;
   min-width: 0;
   &__photo {
@@ -594,7 +699,7 @@ main {
   }
   &__subtitle {
     margin: 17px auto;
-    width: 1024px;
+    max-width: 1024px;
     font-family: Gilroy;
     font-size: 34px;
     line-height: 120%;
@@ -603,8 +708,11 @@ main {
   }
 }
 .icons {
-  width: 800px;
+  max-width: 800px;
   margin: 60px auto;
+  @media screen and (max-width: 800px) {
+    max-width: 400px;
+  }
   &__link {
     width: 80px;
     height: 100px;
@@ -621,10 +729,17 @@ main {
     color: #ffffff;
     font-weight: 700;
     text-align: center;
+    @media screen and (max-width: 600px) {
+      font-size: 35px;
+    }
   }
   &__form {
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__input {
     width: 370px;
@@ -650,16 +765,12 @@ main {
     text-transform: uppercase;
     color: #333333;
     padding: 17px 104px;
-    background: linear-gradient(
-        101.67deg,
-        rgba(255, 255, 255, 0.5) 0%,
-        rgba(255, 255, 255, 0.1) 100%
-      ),
-      #f2c94c;
+    background: linear-gradient(101.67deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%), #f2c94c;
   }
+
   &__postcript {
     margin: 20px auto;
-    width: 860px;
+    max-width: 860px;
     font-family: Roboto;
     font-size: 13px;
     line-height: 150%;
@@ -669,6 +780,9 @@ main {
     & a {
       color: #ffffff;
       text-decoration: underline;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
     }
   }
 }
